@@ -32,7 +32,8 @@ class LinkedList:
         # wrap the `data` in a Node instance
         new_node = Node(data)
 
-        # what about the empty case, when both self.head = None and self.tail = None?
+        # what about the empty case, when both self.head = None and 
+        # self.tail = None?
         if not self.head and not self.tail:
             # list is empty
             # update both head and tail to point to the new node
@@ -129,7 +130,8 @@ class LinkedList:
             # the data we're looking for
             if current.get_value() == data:
                 return True
-            # update our `current` pointer to point to the next Node in the linked list
+            # update our `current` pointer to point to the next Node in the 
+            # linked list
             current = current.get_next()
 
         # we checked the whole linked list and didn't find the data
@@ -160,9 +162,13 @@ class LinkedList:
 
 """
 To hopefully summarise some of the things he’s gone over so far:
-A linked list is comprised of nodes that have a value and next property. The value is the data associated with that node, and the next property points to whatever value (if any) comes after it.
+A linked list is comprised of nodes that have a value and next property. 
+The value is the data associated with that node, and the next property points 
+to whatever value (if any) comes after it.
 Hence it is represented as values (contained in a circle/node) and arrows:
 1 -> 2 -> 3 -> 4
-To keep track of an entire “list” of nodes, the linked list class itself has head and tail properties that point to the starting and ending nodes.
-Because there is a pointer to the tail node, it makes it much easier to create another node and then set the tail’s pointer to that new node.
+To keep track of an entire “list” of nodes, the linked list class itself has 
+head and tail properties that point to the starting and ending nodes.
+Because there is a pointer to the tail node, it makes it much easier to create 
+another node and then set the tail’s pointer to that new node.
 """
