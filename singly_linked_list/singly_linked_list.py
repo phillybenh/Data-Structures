@@ -32,8 +32,7 @@ class LinkedList:
         # wrap the `data` in a Node instance
         new_node = Node(data)
 
-        # what about the empty case, when both self.head = None and 
-        # self.tail = None?
+        # what about the empty case, when both self.head = None and self.tail = None?
         if not self.head and not self.tail:
             # list is empty
             # update both head and tail to point to the new node
@@ -54,6 +53,7 @@ class LinkedList:
     '''
 
     def remove_tail(self):
+        # if the linked list is empty
         if self.tail is None:
             return None
         # save the tail Node's data
@@ -79,7 +79,9 @@ class LinkedList:
 
             # `current` is now pointing at the Node right
             # before the tail Node
+            self.tail = None
             self.tail = current
+            # self.tail.set_next(None)
 
         return data
 
@@ -130,8 +132,7 @@ class LinkedList:
             # the data we're looking for
             if current.get_value() == data:
                 return True
-            # update our `current` pointer to point to the next Node in the 
-            # linked list
+            # update our `current` pointer to point to the next Node in the linked list
             current = current.get_next()
 
         # we checked the whole linked list and didn't find the data

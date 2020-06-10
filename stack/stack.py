@@ -12,7 +12,7 @@ return elements in Last In First Out order.
 """
 
 # Array version of stack
-"""
+
 class Stack:
     def __init__(self):
         self.size = 0
@@ -56,6 +56,6 @@ class Stack:
             popper = self.storage.remove_tail()
             self.size -= 1
             return popper
-       
+"""
 
 
