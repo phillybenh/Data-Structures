@@ -9,6 +9,12 @@ This part of the project comprises two days:
 2. Implement the `in_order_print`, `bft_print`, and `dft_print` methods
    on the BSTNode class.
 """
+
+# import Queue to support BFT
+from queue_copy import Queue
+# import Stack to support iterative DFT
+from stack_copy import Stack
+
 class BSTNode:
     def __init__(self, value):
         self.value = value
@@ -100,32 +106,47 @@ class BSTNode:
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
-        # create a queue
+        # create queue
+        queue = Queue()
 
         # root into queue
+        queue.enqueue(node)
+
         # while queue is not empty
+        while queue.__len__() is not 0:
             # node = pop head of queue
+            node = queue.dequeue()
             # DO THE THING (print)
+            print(node.value)
             # add children of root to queue
+            if node.left:
+                queue.enqueue(node.left)
+            if node.right:
+                queue.enqueue(node.right)
+            
             ##### pop node off queue - cancel this one, we moved it up
 
-
-
-        pass
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
         # create a stack
+        stack = Stack()
 
         # root into stack
-        # while queue is not empty
-            # node = pop head of stack
-            # DO THE THING (print)
-            # add children of root to stack
-            
+        stack.push(node)
 
-        pass
+        # while queue is not empty
+        while stack.__len__() is not 0:
+            # node = pop head of stack
+            node = stack.pop()
+            # DO THE THING (print)
+            print(node.value)
+            # add children of root to stack
+            if node.left:
+                stack.push(node.left)
+            if node.right:
+                stack.push(node.right)
 
     # Stretch Goals -------------------------
     # Note: Research may be required
