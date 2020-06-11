@@ -76,31 +76,55 @@ class BSTNode:
         #check if there is anything in tree
         if self:
             fn(self.value)
-            # cycle through right branches
-            if self.right:
-                self.right.for_each(fn)
             # cycle through left branches
             if self.left:
                 self.left.for_each(fn)
-      
-
-
+            # cycle through right branches
+            if self.right:
+                self.right.for_each(fn)
 
     # Part 2 -----------------------
 
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
-        pass
+       
+        if self.left:
+            self.left.in_order_print(node)
+
+        print(self.value)
+
+        if self.right:
+            self.right.in_order_print(node)        
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
+        # create a queue
+
+        # root into queue
+        # while queue is not empty
+            # node = pop head of queue
+            # DO THE THING (print)
+            # add children of root to queue
+            ##### pop node off queue - cancel this one, we moved it up
+
+
+
         pass
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
+        # create a stack
+
+        # root into stack
+        # while queue is not empty
+            # node = pop head of stack
+            # DO THE THING (print)
+            # add children of root to stack
+            
+
         pass
 
     # Stretch Goals -------------------------
