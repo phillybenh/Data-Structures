@@ -15,7 +15,7 @@ Stretch: What if you could only use instances of your Stack class to implement t
 """
 
 # Array version of queue
-"""
+
 class Queue:
     def __init__(self):
         self.size = 0
@@ -60,3 +60,4 @@ class Queue:
             popper = self.storage.remove_head()
             self.size -= 1
             return popper
+"""

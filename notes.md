@@ -94,3 +94,15 @@
      - `enqueue` adds an element to the back of the queue.
      - `dequeue` removes and returns the element at the front of the queue.
      - `len` returns the number of elements in the queue.
+
+## Doubly Linked List
+ - 
+## Binary Search Tree
+ - *trees*: can be thought of as linked lists,but without the constraint that each node only points to one other node
+ - *binary tree*: tree where each node can point to TWO other nodes
+ - Terminology:
+     - Root: topmost node of tree
+     - Child: a node directly connected to another node when moving away form the root
+     - Parent: a node directly connected to another node when moving towards form the root
+     - Siblings: nodes that share the same parent
+     - Leaf: node that does not have any children
