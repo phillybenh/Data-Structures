@@ -113,7 +113,7 @@ class BSTNode:
         queue.enqueue(node)
 
         # while queue is not empty
-        while queue.__len__() is not 0:
+        while queue.__len__() != 0:
             # node = pop head of queue
             node = queue.dequeue()
             # DO THE THING (print)
@@ -137,7 +137,7 @@ class BSTNode:
         stack.push(node)
 
         # while queue is not empty
-        while stack.__len__() is not 0:
+        while stack.__len__() != 0:
             # node = pop head of stack
             node = stack.pop()
             # DO THE THING (print)
@@ -153,8 +153,22 @@ class BSTNode:
 
     # Print Pre-order recursive DFT
     def pre_order_dft(self, node):
-        pass
+
+        print(self.value)
+
+        if self.left:
+            self.left.in_order_print(node)
+
+        if self.right:
+            self.right.in_order_print(node)  
 
     # Print Post-order recursive DFT
     def post_order_dft(self, node):
-        pass
+
+        if self.left:
+            self.left.in_order_print(node)
+
+        if self.right:
+            self.right.in_order_print(node)
+        
+        print(self.value)
