@@ -126,7 +126,6 @@ class BSTNode:
             
             ##### pop node off queue - cancel this one, we moved it up
 
-
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
@@ -154,21 +153,27 @@ class BSTNode:
     # Print Pre-order recursive DFT
     def pre_order_dft(self, node):
 
-        print(self.value)
 
-        if self.left:
-            self.left.in_order_print(node)
+        if node is None:
+            return
+        print(node.value)
 
-        if self.right:
-            self.right.in_order_print(node)  
+        node.post_order_dft(node.left)
+        node.post_order_dft(node.right)
+
+        # print(self.value)
+
+        # if self.left:
+        #     self.left.in_order_print(node)
+
+        # if self.right:
+        #     self.right.in_order_print(node)  
 
     # Print Post-order recursive DFT
     def post_order_dft(self, node):
 
-        if self.left:
-            self.left.in_order_print(node)
-
-        if self.right:
-            self.right.in_order_print(node)
-        
-        print(self.value)
+        if node is None:
+            return
+        node.post_order_dft(node.left)
+        node.post_order_dft(node.right)
+        print(node.value)
