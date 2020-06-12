@@ -106,3 +106,7 @@
      - Parent: a node directly connected to another node when moving towards form the root
      - Siblings: nodes that share the same parent
      - Leaf: node that does not have any children
+ - Pros and Cons:
+     - Pro: Searching for an element is more efficient than array or linked-list
+     - Con: not as efficient to insert in binary serch tree as array or linked-list
+     - Con: Performance depends on if tree is "balanced" or not. 
